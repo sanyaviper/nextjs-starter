@@ -7,6 +7,8 @@ node {
         checkout scm
         
         sh "ls -la"
+        
+        sh "sudo service docker status"
     }
 
     stage('Build image') {
