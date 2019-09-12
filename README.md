@@ -1,4 +1,4 @@
-# Next.js Starter Project 111
+# Next.js Starter Project
 
 This is a starter project for React that uses Next.js.
 
