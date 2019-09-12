@@ -8,7 +8,7 @@ node {
         
         sh "ls -la"
         
-        sh "sudo service docker status"
+        /*sh "sudo service docker status"*/
     }
 
     stage('Build image') {
