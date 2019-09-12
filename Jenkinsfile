@@ -38,8 +38,7 @@ node {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }*/
-          docker.image('node-app').withRun('-p 3000:3000')
-
+          app.run()
         /*sh 'docker run -it -p 3000:3000 node-app'*/
         sh 'echo "Push image"'
     }
