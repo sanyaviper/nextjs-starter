@@ -85,7 +85,7 @@ You can configure `now` to use aliases with custom domains using the `now domain
 
 ----
 
-## Further reading
+## Further reading 1
 
 ### Database hosting
 
