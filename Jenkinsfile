@@ -11,8 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        /*app = docker.build("getintodevops/hellonode")*/
-        sh 'echo "stage"'
+        def app = docker.build("node-app")
     }
 
     stage('Test image') {
@@ -33,5 +32,7 @@ node {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }*/
+        
+        sh 'echo "Push image"'
     }
 }
