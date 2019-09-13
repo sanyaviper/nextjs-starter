@@ -8,9 +8,17 @@ node {
         
         sh "ls -la"
         
+        
         /*sh "sudo service docker status"*/
     }
-
+    stage ('read properties from webhook json') {
+       echo 'Hello World webhook'
+        echo 'Hello World webhook:' + from_webhook
+        echo "the build worked! The payload is $from_webhook"
+       echo 'git repository name is :' + repository_name
+       echo 'author of commit is :' + commit_author
+    }
+    
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
