@@ -13,10 +13,15 @@ node {
     }
     stage ('read properties from webhook json') {
        echo 'Hello World webhook'
-        echo 'Hello World webhook:' + from_webhook
+       /* echo 'Hello World webhook:' + from_webhook
         echo "the build worked! The payload is $from_webhook"
        echo 'git repository name is :' + repository_name
-       echo 'author of commit is :' + commit_author
+       echo 'author of commit is :' + commit_author*/
+        
+        def payload = new groovy.json.JsonSlurper().parseText("${params.payload}")
+        // Echoes the new commit hash
+        echo payload
+        
     }
     
     stage('Build image') {
