@@ -5,7 +5,7 @@ node {
     
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
-
+ 
         scmVars = checkout scm   
         // scmVars contains the following values   
         // GIT_BRANCH=origin/mybranch
