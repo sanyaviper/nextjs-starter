@@ -26,7 +26,7 @@ node {
         //def allBranches = scm.branches
         //echo allBranches
         // Only the first configured branch name
-        
+        echo "the build worked! The payload is $payload"
         $webhookres='$'
 
 echo $webhookres
