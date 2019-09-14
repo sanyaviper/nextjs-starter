@@ -23,28 +23,6 @@ node {
         echo "scmVars"
         
         
-         properties([
-            pipelineTriggers([
-                [$class: 'GenericTrigger',
-                     genericVariables: [
-                             [expressionType: 'JSONPath', key: 'body', value: '$'],
-                             [expressionType: 'JSONPath', key: 'reference', value: '$.ref'],
-                             [expressionType: 'JSONPath', key: 'referenceType', value: '$.ref_type']
-                     ],
-                     genericHeaderVariables: [
-                             [key: 'X-GitHub-Event', regexpFilter: ''],
-                             [key: 'X-Hub-Signature', regexpFilter: '']
-                     ],
-
-                     regexpFilterText: '',
-                     regexpFilterExpression: ''
-                ]
-            ])
-    ])
-        
-        def payLoad = "${env.body}"
-
-echo "${payLoad}'
         
         // List of all configured branches
         //def allBranches = scm.branches
@@ -59,6 +37,7 @@ echo "${payLoad}'
         
         $webhookres='$'
 
+echo $
 echo $webhookres
     }
     
