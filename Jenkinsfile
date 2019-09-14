@@ -32,12 +32,12 @@ node {
         echo payload
         
         
-        
+        /*
         $webhookres='$'
 
 echo $
 echo payload
-        echo $payload
+        echo $payload*/
     }
     
     stage ('read properties from webhook json') {
