@@ -27,6 +27,9 @@ node {
         //echo allBranches
         // Only the first configured branch name
         echo "the build worked! The payload is $payload"
+        echo payload
+        echo $payload
+        
         $webhookres='$'
 
 echo $webhookres
