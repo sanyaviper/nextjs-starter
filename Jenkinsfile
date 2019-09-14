@@ -23,16 +23,28 @@ node {
         echo "scmVars"
         
         
-         genericTrigger {
-           genericVariables {
-            genericVariable {
-             key("VARIABLE_FROM_POST")
-             value("\$.something")
-             expressionType("JSONPath") //Optional, defaults to JSONPath
-             regexpFilter("") //Optional, defaults to empty string
-             defaultValue("") //Optional, defaults to empty string
-            }
-           }
+         properties([
+            pipelineTriggers([
+                [$class: 'GenericTrigger',
+                     genericVariables: [
+                             [expressionType: 'JSONPath', key: 'body', value: '$'],
+                             [expressionType: 'JSONPath', key: 'reference', value: '$.ref'],
+                             [expressionType: 'JSONPath', key: 'referenceType', value: '$.ref_type']
+                     ],
+                     genericHeaderVariables: [
+                             [key: 'X-GitHub-Event', regexpFilter: ''],
+                             [key: 'X-Hub-Signature', regexpFilter: '']
+                     ],
+
+                     regexpFilterText: '',
+                     regexpFilterExpression: ''
+                ]
+            ])
+    ])
+        
+        def payLoad = "${env.body}"
+
+echo "${payLoad}'
         
         // List of all configured branches
         //def allBranches = scm.branches
