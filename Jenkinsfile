@@ -6,7 +6,7 @@ node {
         /* Let's make sure we have the repository cloned to our workspace */
 
         scmVars = checkout scm   
-        // scmVars contains the following values
+        // scmVars contains the following values   
         // GIT_BRANCH=origin/mybranch
         // GIT_COMMIT=fc8279a107ebaf806f2e310fce15a7a54238eb71
         // GIT_PREVIOUS_COMMIT=6f2e319a1fc82707ebaf800fce15a7a54238eb71
