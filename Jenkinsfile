@@ -33,7 +33,7 @@ node {
         
         def payLoad = "${env.body}"
 
-        echo "${payLoad}'
+        echo "${payLoad}"
         
         $webhookres='$'
 
