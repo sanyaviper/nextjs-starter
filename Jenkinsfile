@@ -27,8 +27,9 @@ node {
         //echo allBranches
         // Only the first configured branch name
         
-        echo params
-        echo env
+        $webhookres='$'
+
+echo $webhookres
     }
     
     stage ('read properties from webhook json') {
