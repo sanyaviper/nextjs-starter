@@ -17,7 +17,8 @@ node {
     stage('test scope') {
         echo scmVars.GIT_BRANCH
         echo "scmVars"
-        echo scmVars
+        
+        
         
         // List of all configured branches
         def allBranches = scm.branches
