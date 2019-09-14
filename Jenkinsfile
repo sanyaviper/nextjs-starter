@@ -1,5 +1,5 @@
 node { 
-    def app
+    def app 
     def scmVars
     
     stage('Clone repository') {
