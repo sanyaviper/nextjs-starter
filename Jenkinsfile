@@ -32,7 +32,7 @@ node {
         //echo "the build worked! The payload is $payload"
         //echo payload
         
-        echo $payload
+        //echo $payload
         /*
         $webhookres='$'
 
@@ -51,9 +51,8 @@ echo "One of Jenkins job webhook payload field is ${env}"
        echo 'git repository name is :' + repository_name
        echo 'author of commit is :' + commit_author*/
         
-        def payload = new groovy.json.JsonSlurper().parseText("${params.payload}")
-        // Echoes the new commit hash
-        echo payload
+        
+        echo "my_ref: " + my_ref
         
     }
     
