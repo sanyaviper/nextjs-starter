@@ -26,8 +26,9 @@ node {
         //def allBranches = scm.branches
         //echo allBranches
         // Only the first configured branch name
-        def gitBranch = scm.branches[0].name
-        echo gitBranch
+        
+        # !/bin/bash    
+        ACTION=`echo $payload | php -r '$data = file_get_contents("php://stdin"); $json = json_decode($data, true); echo $json["action"];'`
     }
     
     stage ('read properties from webhook json') {
