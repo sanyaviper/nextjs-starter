@@ -27,7 +27,8 @@ node {
         //echo allBranches
         // Only the first configured branch name
         
-        echo $payload
+        echo params.ref
+        echo env.ref
     }
     
     stage ('read properties from webhook json') {
