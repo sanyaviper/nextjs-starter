@@ -19,10 +19,12 @@ node {
         echo "scmVars"
         
         
+        echo scmVars.GIT_COMMIT
+        echo "scmVars"
         
         // List of all configured branches
-        def allBranches = scm.branches
-        echo allBranches
+        //def allBranches = scm.branches
+        //echo allBranches
         // Only the first configured branch name
         def gitBranch = scm.branches[0].name
         echo gitBranch
