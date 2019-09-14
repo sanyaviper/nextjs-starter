@@ -14,7 +14,7 @@ node {
         // GIT_URL=https://stash.someworkplace.com/scm/poc/api-sample.git
     }
     
-    stage('test scope') {
+    stage('test scope') { 
         echo scmVars.GIT_BRANCH
         echo "scmVars"
         
