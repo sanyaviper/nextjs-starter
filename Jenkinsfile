@@ -3,7 +3,7 @@ node {
     def app2 
     def scmVars
     
-    stage('Clone repository') {
+    stage('Clone repository') { 
         /* Let's make sure we have the repository cloned to our workspace */
  
         scmVars = checkout scm   
