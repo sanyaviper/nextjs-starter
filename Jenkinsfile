@@ -27,8 +27,7 @@ node {
         //echo allBranches
         // Only the first configured branch name
         
-        # !/bin/bash    
-        ACTION=`echo $payload | php -r '$data = file_get_contents("php://stdin"); $json = json_decode($data, true); echo $json["action"];'`
+        echo $payload
     }
     
     stage ('read properties from webhook json') {
