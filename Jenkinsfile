@@ -31,14 +31,13 @@ node {
         echo "the build worked! The payload is $payload"
         echo payload
         
-        def payLoad = "${env.body}"
-
-        echo "${payLoad}"
+        
         
         $webhookres='$'
 
 echo $
-echo $webhookres
+echo payload
+        echo $payload
     }
     
     stage ('read properties from webhook json') {
