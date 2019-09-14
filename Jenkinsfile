@@ -31,7 +31,7 @@ node {
         echo "the build worked! The payload is $payload"
         echo payload
         
-        
+        echo $payload
         /*
         $webhookres='$'
 
