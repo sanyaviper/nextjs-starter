@@ -22,6 +22,18 @@ node {
         echo scmVars.GIT_COMMIT
         echo "scmVars"
         
+        
+         genericTrigger {
+           genericVariables {
+            genericVariable {
+             key("VARIABLE_FROM_POST")
+             value("\$.something")
+             expressionType("JSONPath") //Optional, defaults to JSONPath
+             regexpFilter("") //Optional, defaults to empty string
+             defaultValue("") //Optional, defaults to empty string
+            }
+           }
+        
         // List of all configured branches
         //def allBranches = scm.branches
         //echo allBranches
