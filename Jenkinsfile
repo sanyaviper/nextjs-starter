@@ -59,7 +59,7 @@ echo "One of Jenkins job webhook payload field is ${env}"
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("node-app")
+        app = docker.build("node-app")  
     }
 
     stage('Test image') {
