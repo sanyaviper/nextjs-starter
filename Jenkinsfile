@@ -85,5 +85,5 @@ echo "One of Jenkins job webhook payload field is ${env}"
           app.run('-p 80:3000')
         /*sh 'docker run -it -p 3000:3000 node-app'*/
         sh 'echo "Push image"'
-    }
+    } 
 }
